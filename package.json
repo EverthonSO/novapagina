@@ -1,4 +1,5 @@
-
 "scripts": {
-  "build": "astro build"
+  "build": "astro build",
+  "start": "astro dev",
+  "preview": "astro preview"
 }
