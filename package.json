@@ -1,5 +1,10 @@
-"scripts": {
-  "build": "astro build",
-  "start": "astro dev",
-  "preview": "astro preview"
+{
+  "name": "everthonso",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "astro build"
+  },
+  "dependencies": {
+    "astro": "^2.0.0"
+  }
 }
