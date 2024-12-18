@@ -1,54 +1,57 @@
-# Astro Starter Kit: Basics
+# Professor Website
 
-```sh
-npm create astro@latest -- --template basics
+This is a professional academic website built with Astro.
+
+## Project Structure
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-│   └── favicon.svg
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/     # Reusable components
+│   ├── content/        # Content collections (events, publications, projects)
+│   ├── layouts/        # Page layouts
+│   └── pages/          # Route pages
+└── public/            # Static assets
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Content Management
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Content is managed through collections in the `src/content` directory:
 
-Any static assets, like images, can be placed in the `public/` directory.
+- `events/`: Academic events and deadlines
+- `publications/`: Research publications
+- `projects/`: Research projects
 
-## 🧞 Commands
+Each collection has its schema defined in `src/content/config.ts`.
 
-All commands are run from the root of the project, from a terminal:
+## Development
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+# Install dependencies
+npm install
 
-## 👀 Want to learn more?
+# Start development server
+npm run dev
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Deployment
+
+The site is configured for deployment on Netlify. Push to the main branch to trigger automatic deployment.
+
+## Adding Content
+
+To add new content:
+
+1. Create a new JSON file in the appropriate collection directory
+2. Follow the schema defined in `content/config.ts`
+3. Set `featured: true` to show the item on the homepage
+
+## License
+
+MIT
